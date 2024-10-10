@@ -290,11 +290,33 @@
     </section>
 
     <section id="Downloads">
-        <h1>Nagranie</h1>
-        <button id="playButton">Odtwórz poprawione nagranie</button>
+    <h1>Nagranie</h1>
+    <div class="music-player">
+        <button id="playButton">Odtwórz nagranie</button>
         <audio id="audio" src="NAPRAWIONEJAKUBP.wav" preload="auto"></audio>
-        <a href="https://jacobeagle.github.io/jakubp/NAPRAWIONEJAKUBP.wav" class="button">Pobierz</a>
-    </section>
+        <a href="https://jacobeagle.github.io/jakubp/NAPRAWIONEJAKUBP.wav" id="downloadLink">Pobierz nagranie</a>
+    </div>
+</section>
+
+<script>
+    const audioElement = document.getElementById('audio');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+        if (audioElement.paused) {
+            audioElement.play();
+            playButton.textContent = 'Pauza';
+        } else {
+            audioElement.pause();
+            playButton.textContent = 'Odtwórz nagranie';
+        }
+    });
+
+    audioElement.addEventListener('ended', () => {
+        playButton.textContent = 'Odtwórz nagranie';
+    });
+</script>
+
 
     <footer>
         &copy; 2024 Jakub Puchała. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/jakubp">Repozytorium</a>
