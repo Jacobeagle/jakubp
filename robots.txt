@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jacobeagle.github.io/glownastrona/sitemap.xml
+Sitemap: https://jacobeagle.github.io/jakubp/sitemap.xml
