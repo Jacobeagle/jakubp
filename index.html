@@ -154,6 +154,46 @@
             100% {transform: translateY(0);}
         }
 
+        .music-player {
+    background-color: #333; /* lub inny kolor z palety */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 300px; /* dostosuj szerokość */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#playButton {
+    background-color: #28a745; /* zielony kolor */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#playButton:hover {
+    background-color: #218838; /* ciemniejszy zielony */
+    transform: scale(1.05);
+}
+
+#downloadLink {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff; /* niebieski kolor */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+#downloadLink:hover {
+    color: #0056b3; /* ciemniejszy niebieski */
+}
+
+        
         .button {
             display: inline-flex;
             align-items: center;
@@ -250,8 +290,10 @@
     </section>
 
     <section id="Downloads">
-        <h2>Pobieranie</h2>
-        <a href="NAPRAWIONEJAKUBP.wav" class="button">Dla taty (poprawione nagranie)</a>
+        <h1>Nagranie</h1>
+        <button id="playButton">Odtwórz poprawione nagranie</button>
+        <audio id="audio" src="twoja_muzyka.mp3" preload="auto"></audio>
+        <a href="https://jacobeagle.github.io/jakubp/NAPRAWIONEJAKUBP.wav" class="button">Pobierz</a>
     </section>
 
     <footer>
