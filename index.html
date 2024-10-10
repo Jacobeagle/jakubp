@@ -292,46 +292,11 @@
     <section id="Downloads">
     <h1>Nagranie</h1>
     <div class="music-player">
-        <button id="playButton">Odtwórz nagranie</button>
-        <audio id="audio" src="NAPRAWIONEJAKUBP.wav" preload="auto"></audio>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1589432944&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
         <a href="https://jacobeagle.github.io/jakubp/NAPRAWIONEJAKUBP.wav" id="downloadLink">Pobierz nagranie</a>
     </div>
 </section>
-
-<script>
-    const audioElement = document.getElementById('audio');
-    const playButton = document.getElementById('playButton');
-
-    playButton.addEventListener('click', () => {
-        if (audioElement.paused) {
-            audioElement.play();
-            playButton.textContent = 'Pauza';
-        } else {
-            audioElement.pause();
-            playButton.textContent = 'Odtwórz nagranie';
-        }
-    });
-
-    audioElement.addEventListener('ended', () => {
-        playButton.textContent = 'Odtwórz nagranie';
-    });
-</script>
-
-
-    <footer>
-        &copy; 2024 Jakub Puchała. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/jakubp">Repozytorium</a>
-    </footer>
-
-        <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'pl,en',
-            includedLanguages: 'pl,en,es,de,fr,it,pt,uk,zh,ja,ko,nl,sv,no,da,fi',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-        </script>
 
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
